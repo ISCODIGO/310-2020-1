@@ -14,26 +14,23 @@ import java.util.Arrays;
  */
 public class Ejemplo2 {
     public static void main(String[] args) {
-        // Probar primero el array aleatorio
+        // Generar el objeto Generador
         Generador gen = new Generador(20);
-        int[] arreglo = gen.getArray();
+        int arreglo[] = gen.getArray();
         
         System.out.println(Arrays.toString(arreglo));
         
-        // insertarlo en una coleccion... probare con un ArrayList
-        System.out.println("Array original");
-        ArrayList<Integer> lista = new ArrayList(20);
-        
-        System.out.println("Recorrido en una lista enlazada");
+        // Insertar en una Coleccion
+        ArrayList<Integer> lista = new ArrayList();
         for (int i = 0; i < arreglo.length; i++) {
-            // que pasa si cambio la funcion de insercion
+            // Que pasa si se cambia el metodo de insercion
+            //lista.add(arreglo[i]);
             lista.add(0, arreglo[i]);
         }
         
-        // Aqui realmente no hay cambio
-        for (int i = 0; i < lista.size(); i++) {
-            System.out.print(lista.get(i) + ", ");
-        }
-        System.out.println("");
+        // Probar el recorrido de la Coleccion
+        System.out.println(lista);
+        
+        
     }
 }
