@@ -7,6 +7,7 @@ package ejercicios;
 
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 import java.util.TreeSet;
 import librerias.Generador;
@@ -21,10 +22,10 @@ public class UsoSet {
         
         Set<Integer> set1 = new HashSet();
         int[] arr1 = gen.getArray();
+        System.out.println("Arreglo de HashSet\t" + Arrays.toString(arr1));
         for (int i = 0; i < arr1.length; i++) {
             set1.add(arr1[i]);
         }
-        System.out.println("Arreglo de HashSet\t" + Arrays.toString(arr1));
         // Me di cuenta que estas colecciones imprimen directamente su contenido
         System.out.println("HashSet [completo]\t" + set1);        
 
@@ -36,5 +37,9 @@ public class UsoSet {
         }
         System.out.println("Arreglo de TreeSet\t" + Arrays.toString(arr2));
         System.out.println("TreeSet [completo]\t" + set2);
+        
+        for (int valor: set1) {
+            System.out.println(valor);
+        }
     }
 }

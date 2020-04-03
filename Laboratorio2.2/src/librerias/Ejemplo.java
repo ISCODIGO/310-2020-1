@@ -15,6 +15,10 @@ public class Ejemplo {
 
     public static void main(String[] args) {
         Set<Integer> miHashSet = new HashSet<Integer>();
+        int[] t = {11, 21, 31};
+        miHashSet.add(t[0]);
+        miHashSet.add(t[1]);
+        miHashSet.add(t[2]);
         miHashSet.add(10);
         miHashSet.add(20);
         miHashSet.add(30);
