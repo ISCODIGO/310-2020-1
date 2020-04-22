@@ -1,4 +1,4 @@
-package c16_stack;
+package stack;
 
 import java.util.Arrays;
 
