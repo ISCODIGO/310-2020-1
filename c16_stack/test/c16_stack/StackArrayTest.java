@@ -26,7 +26,7 @@ public class StackArrayTest {
     }
     
     @Test
-    public void test_InsertandoUnElemento() {
+    public void test_InsertandoUnElemento() throws Exception {
         stack.push(10);
         assertFalse("Al insertar el stack no esta vacio", stack.estaVacia());
         assertEquals("Al insertar el stack tiene un elemento", 1, stack.getCantidad());
@@ -34,7 +34,7 @@ public class StackArrayTest {
     }
     
     @Test
-    public void test_EliminandoUnElemento() {
+    public void test_EliminandoUnElemento() throws Exception {
         stack.push(20);
         int eliminado = stack.pop();
         assertTrue("Al eliminar el stack esta vacio", stack.estaVacia());
@@ -43,12 +43,12 @@ public class StackArrayTest {
     }
     
     @Test(expected = Exception.class)
-    public void test_EliminandoEnStackVacio() {
+    public void test_EliminandoEnStackVacio() throws Exception {
         stack.pop();
     }
     
     @Test(expected = Exception.class)
-    public void test_InsertandoEnStackLleno() {
+    public void test_InsertandoEnStackLleno() throws Exception {
         stack.push(10);
         stack.push(20);
         stack.push(30);

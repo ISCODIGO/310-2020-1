@@ -1,5 +1,7 @@
 package c16_stack;
 
+import java.util.Arrays;
+
 public class StackArray {
     // Atributos
     private int[] elementos;
@@ -51,5 +53,10 @@ public class StackArray {
     
     public int getCantidad() {
         return this.cantidad;
+    }
+
+    @Override
+    public String toString() {
+        return Arrays.toString(this.elementos);
     }
 }
